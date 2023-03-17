@@ -63,8 +63,8 @@ speed.addEventListener('click', (e)=>{
     //Declaring a variable checkSpeed 
     let checkSpeed
 
-    //creating an anonymous function called speeding that evaluates the conditions
-    const speeding = function(){
+    //creating an arrow function called speeding that evaluates the conditions
+    const speeding = checkSpeed =>{
         //if check the speed is greater than 70
         if (inputSpeed <= 70){
             //display Ok if the expression is TRUE
@@ -80,7 +80,7 @@ speed.addEventListener('click', (e)=>{
             //display the points if FALSE
             checkSpeed = `Points: ${checkSpeed}`
         }
-         // returning the value contained in the variable checkSpeed
+        // returning the value contained in the variable checkSpeed
         return checkSpeed
 
     }
@@ -99,14 +99,12 @@ salary.addEventListener('click', (e)=>{
         console.log(inputBenefits)
         let finalOutput
         // write Code For the Code challenge
-
-        // declaring the PAYE, NHIF and NSSF variables
-        let paye, nhif, nssf
+        
         // calculating the gross pay by summing up the basic salary and the benefits
         let grossSalary = inputSalary + inputBenefits
 
-         //Defining a named function called calculatepaye that calculates the PAYE rates
-        function calculatePaye(){
+         //Defining an arrow function called calculatepaye that calculates the PAYE rates
+        const calculatePaye = paye =>{
             // if statement to check whether the gross salary is less than or equal to Kshs. 24,000
             if (grossSalary <= 24000){
                 // calculating the PAYE using the 10% tax rate
@@ -124,10 +122,11 @@ salary.addEventListener('click', (e)=>{
             }
             // returning the value contained in the variable paye
             return paye
+            
         }
 
-         //Defining a named function called calculateNhif that calculates the NHIF rates
-        function calculateNhif(){
+         //Defining an arrow function called calculateNhif that calculates the NHIF rates
+        const calculateNhif = nhif => {
 
             // ifstatement to check whether the gross salary is less than Kshs. 6,000
             if (grossSalary < 6000){
@@ -219,9 +218,9 @@ salary.addEventListener('click', (e)=>{
             return nhif
                 
         }
-         //Defining a named function called calculateNssf that calculates the NSSF Tier I and Tier II 
-        function calculateNssf(){
-            // returning the value contained in the variable nssf
+         //Defining an arrow function called calculateNssf that calculates the NSSF Tier I and Tier II 
+        const calculateNssf = nssf => {
+            // calculating the NSSF tax using the 6% tax rate
             return nssf = (0.6 * 6000)+(0.6 * 12000)
         }
 
@@ -235,7 +234,7 @@ salary.addEventListener('click', (e)=>{
     const finalnhif = calculateNhif()
 
     //Calculating the net salary by deducting the deductions from the gross salary
-    const netsalary = grossSalary - finalpaye - finalnhif -nssf 
+    const netsalary = grossSalary - finalpaye - finalnhif - finalnssf
 
     //Assigning the netsalary variable to the finalOutput
     finalOutput = netsalary
