@@ -62,7 +62,7 @@ speed.addEventListener('click', (e)=>{
     
     //Declaring a variable checkSpeed 
     let checkSpeed
-    
+
     //creating an anonymous function called speeding that evaluates the conditions
     const speeding = function(){
         //if check the speed is greater than 70
@@ -98,24 +98,28 @@ salary.addEventListener('click', (e)=>{
         console.log(inputSalary)
         console.log(inputBenefits)
         let finalOutput
-
         // write Code For the Code challenge
+
+        // declaring the PAYE, NHIF and NSSF variables
         let paye, nhif, nssf
         // calculating the gross pay by summing up the basic salary and the benefits
         let grossSalary = inputSalary + inputBenefits
 
          //Defining a named function called calculatepaye that calculates the PAYE rates
         function calculatePaye(){
-            // if statement to check whether the gross salary is less than or equal to 24,000
+            // if statement to check whether the gross salary is less than or equal to Kshs. 24,000
             if (grossSalary <= 24000){
+                // calculating the PAYE using the 10% tax rate
                 paye = 0.1 * grossSalary
             }
-            // Else if statement to check whether the gross salary is greater than 24,000 and less than or equal to 32,333
+            // Else if statement to check whether the gross salary is greater than Kshs. 24,000 and less than or equal to Kshs. 32,333
             else if (grossSalary > 24000 && grossSalary <= 32333){
+                // calculating the PAYE using the 25% tax rate
                 paye = 0.25 * grossSalary
             }
-              // Else if statement to check whether the gross salary is greater than 32,333
+              // Else if statement to check whether the gross salary is greater than Kshs. 32,333
             else if (grossSalary > 32333 ){
+                // calculating the PAYE using the 30% tax rate
                 paye = 0.3 * grossSalary
             }
             // returning the value contained in the variable paye
