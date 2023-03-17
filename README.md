@@ -1,7 +1,7 @@
 # Code_challenge
 Write your after
 
-inputGrade-variable for the input Garde
+inputGrade-variable for the input Grade
 
 inputSpeed-variable for the input Speed
 
